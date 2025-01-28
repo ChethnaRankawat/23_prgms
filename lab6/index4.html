@@ -1,0 +1,50 @@
+<!-- Plot a bar chart for the above implementation using date and temperature along X and Y axis
+respectively. Use ChartJS library. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Information</title>
+</head>
+<body>
+    <h1>Weather Information</h1>
+    
+    <!-- Input field to enter city name -->
+    <div>
+        <input type="text" id="city" placeholder="Enter city name" />
+        <button onclick="getWeatherData()">Get Weather</button>
+    </div>
+    
+    <!-- Section to display weather details -->
+    <h2>Weather Details</h2>
+    <div id="weather-details"></div>
+
+    <script src="4_prgm.js"></script>
+</body>
+</html>
+
+
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Temperature Chart</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <h1>Enter City Name to View Temperature</h1>
+  
+  <input type="text" id="city_name" placeholder="City Name">
+  <button onclick="getTemperature()">Get Temperature</button>
+
+  <canvas id="temperatureChart"></canvas>
+
+  <script src="1_prgm.js"></script>
+
+</body>
+</html>

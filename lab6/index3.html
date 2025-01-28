@@ -1,0 +1,38 @@
+<!-- From the same website read the weather forecast details for a given city and display the details
+like date – temperature in a table. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Fetching</title>
+</head>
+<body>
+    <h1>Weather Information</h1>
+    <div>
+        <input type="text" id="city" placeholder="Enter city name" />
+        <button onclick="getWeatherData()">Get Weather</button>
+    </div>
+
+    <h2>Current Weather</h2>
+    <div id="current-weather"></div>
+
+    <h2>5-Day Forecast</h2>
+    <table id="forecast-table" border="1">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Temperature</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <script src="3_prgm.js"></script>
+</body>
+</html>
+
+
+
