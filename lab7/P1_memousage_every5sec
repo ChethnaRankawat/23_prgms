@@ -1,1 +1,32 @@
+/*Question 1: Program to track and display the current memory usage and
+calculate the percentage of free memory for every 5 seconds.*/
+
+
+const os = require('os');
+
+function trackMemory() {
+  setInterval(() => {
+    // Get memory stats
+    const totalMemory = os.totalmem();  // Total memory in bytes
+    const freeMemory = os.freemem();    // Free memory in bytes
+
+    // Convert to GB for easier readability
+    const totalMemoryGB = totalMemory / (1024 ** 3);
+    const freeMemoryGB = freeMemory / (1024 ** 3);
+    const usedMemoryGB = (totalMemory - freeMemory) / (1024 ** 3);
+
+    // Calculate free memory percentage
+    const freeMemoryPercentage = (freeMemory / totalMemory) * 100;
+
+    // Display the memory usage info
+    console.log(`Total Memory: ${totalMemoryGB.toFixed(2)} GB`);
+    console.log(`Used Memory: ${usedMemoryGB.toFixed(2)} GB`);
+    console.log(`Free Memory: ${freeMemoryGB.toFixed(2)} GB`);
+    console.log(`Free Memory Percentage: ${freeMemoryPercentage.toFixed(2)}%`);
+    console.log("-".repeat(40));
+  }, 5000); // Update every 5 seconds
+}
+
+// Start tracking memory usage
+trackMemory();
 
